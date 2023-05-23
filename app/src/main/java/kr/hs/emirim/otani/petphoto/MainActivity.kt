@@ -9,6 +9,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RadioGroup
+import android.widget.Toast
 import kotlinx.coroutines.CoroutineStart
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,15 @@ class MainActivity : AppCompatActivity() {
                 linear.visibility=View.INVISIBLE
             }
 
+        }
+
+        btnDone.setOnClickListener {
+            when(rg.checkedRadioButtonId){
+                R.id.radio_dog -> imgv.setImageResource(R.drawable.dog)
+                R.id.radio_cat -> imgv.setImageResource(R.drawable.cat)
+                R.id.radio_racoon -> imgv.setImageResource(R.drawable.racoon)
+                else -> Toast.makeText(applicationContext, "라디오버튼이 선택되지 않았습니다.", Toast.LENGTH_SHORT)
+            }
         }
     }
 }
