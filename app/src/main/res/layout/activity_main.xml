@@ -7,8 +7,6 @@
     android:orientation="vertical"
     android:padding="@dimen/padding_medium"
     tools:context=".MainActivity">
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,31 +14,29 @@
         android:textSize="@dimen/text_size_large"
         android:layout_marginBottom="@dimen/margin_small"
         />
-
-    <CheckBox
+    <Switch
         android:id="@+id/check_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_start"
         android:textSize="@dimen/text_size_medium"/>
-
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#F8F8AA">
-
+        android:background="#F4F4B5">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_favorite_pet"
             android:textSize="@dimen/text_size_medium"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            />
         <RadioGroup
             android:id="@+id/rg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <RadioButton
                 android:id="@+id/radio_dog"
                 android:layout_width="wrap_content"
@@ -48,29 +44,23 @@
                 android:text="@string/radio_dog"
                 android:textSize="@dimen/text_size_medium"/>
             <RadioButton
-                android:id="@+id/radio_cat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_cat"
-                android:textSize="@dimen/text_size_medium"/>
-            <RadioButton
                 android:id="@+id/radio_racoon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/radio_racoon"
                 android:textSize="@dimen/text_size_medium"/>
-            <Button
-                android:id="@+id/btn_done"
+            <RadioButton
+                android:id="@+id/radio_cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_medium"
-                android:text="@string/btn_done"/>
-            <ImageView
-                android:id="@+id/imgv"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dog"/>
-    </RadioGroup>
+                android:text="@string/radio_cat"
+                android:textSize="@dimen/text_size_medium"/>
+        </RadioGroup>
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dog"/>
     </LinearLayout>
 </LinearLayout>
